@@ -8,8 +8,10 @@ const mergeSort = (array) => {
 	}
 	// Find the center of the array's index and store it into variable.
 	const middle = Math.floor(array.length/2);
+	// Find the left half of the array and store it into variable.
+	const left = array.slice(0, middle);
 
-	return array[middle];
+	return left;
 
 
 }
