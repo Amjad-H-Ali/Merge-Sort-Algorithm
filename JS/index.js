@@ -27,7 +27,7 @@ const merge = (left, right) => {
 
 	// Store left and right array length
 	const [ leftLen, rightLen ] = [ left.length, right.length ];
-
+	// Iterate through arrays and merge items in order
 	while (indexLeft < leftLen && indexRight < rightLen) {
 		if (left[indexLeft] < right[indexRight]) {
 			result.push(left[indexLeft]);
@@ -39,9 +39,9 @@ const merge = (left, right) => {
 			indexRight ++;
 		}
 	}
-
+	// Populate an array with remaining items in left and right array.
 	const remaining = [...left.slice(indexLeft), ...right.slice(indexRight)];
-
+	// Return 'result' array with 'remaining' array concatenated. 
 	return [...result, ...remaining];
 
 }
