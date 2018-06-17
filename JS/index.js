@@ -13,9 +13,21 @@ const mergeSort = (array) => {
 	// Find the right half of the array and store it into variable.
 	const right = array.slice(middle);
 
-	return right;
-
+	return merge(
+		mergeSort(left),
+		mergeSort(right)
+	);
+	
 
 }
 
+const merge = (left, right) => {
+	console.log(`Left: ${left}`);
+	console.log(`Right: ${right}`);
+}
+
 console.log(mergeSort([1,2,3,4,5,6,7]));
+
+
+
+
