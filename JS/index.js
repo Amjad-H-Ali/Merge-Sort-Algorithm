@@ -3,7 +3,7 @@ console.log('Merge Sort');
 const mergeSort = (array) => {
 	const arrayLength = array.length; // Store array's length
 	// If the array only contains 1 item, return it. Ignore everything else.
-	if (arrayLength === 1) {
+	if (arrayLength < 2) {
 		return array
 	}
 	// Find the center of the array's index and store it into variable.
@@ -28,15 +28,26 @@ const merge = (left, right) => {
 	// Store left and right array length
 	const [ leftLen, rightLen ] = [ left.length, right.length ];
 
-	console.log(leftLen);
-	console.log(rightLen);
+	while (indexLeft < leftLen && indexRight < rightLen) {
+		if (left[indexLeft] < right[indexRight]) {
+			result.push(left[indexLeft]);
+
+			indexLeft ++;
+		}
+		else {
+			result.push(right[indexRight]);
+			indexRight ++;
+		}
+	}
+
+	return result;
 	
 
 }
 
+const arr = [7,2,3, 1]
 
-
-console.log(mergeSort([1,2]));
+console.log(mergeSort(arr));
 
 
 
