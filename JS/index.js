@@ -46,7 +46,7 @@ const merge = (left, right) => {
 
 }
 
-const arr = [7,2,3,1,15,30,3,2,0,1,22,19];
+const arr = [7,2,3,1,15,30,3,2,0,1,22,19, 6, 5];
 
 console.log(mergeSort(arr));
 
