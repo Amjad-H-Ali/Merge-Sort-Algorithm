@@ -40,12 +40,13 @@ const merge = (left, right) => {
 		}
 	}
 
-	return result;
-	
+	const remaining = [...left.slice(indexLeft), ...right.slice(indexRight)];
+
+	return [...result, ...remaining];
 
 }
 
-const arr = [7,2,3, 1]
+const arr = [7,2,3,1,15,30,3,2,0,1,22,19];
 
 console.log(mergeSort(arr));
 
