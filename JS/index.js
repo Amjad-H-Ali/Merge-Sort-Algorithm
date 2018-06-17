@@ -7,12 +7,13 @@ const mergeSort = (array) => {
 		return array
 	}
 	// Find the center of the array's index and store it into variable.
-	const middle = Math.floor(arrayLength/2);
+	const middle = Math.floor(arrayLength/2),
 	// Find the left half of the array and store it into variable.
-	const left = array.slice(0, middle);
+		 left = array.slice(0, middle),
 	// Find the right half of the array and store it into variable.
-	const right = array.slice(middle);
+		 right = array.slice(middle);
 
+	// Recursively divides array into pieces.
 	return merge(
 		mergeSort(left),
 		mergeSort(right)
@@ -22,11 +23,20 @@ const mergeSort = (array) => {
 }
 
 const merge = (left, right) => {
-	console.log(`Left: ${left}`);
-	console.log(`Right: ${right}`);
+	let [ result, indexLeft, indexRight ] = [ [], 0, 0 ];
+
+	// Store left and right array length
+	const [ leftLen, rightLen ] = [ left.length, right.length ];
+
+	console.log(leftLen);
+	console.log(rightLen);
+	
+
 }
 
-console.log(mergeSort([1,2,3,4,5,6,7]));
+
+
+console.log(mergeSort([1,2]));
 
 
 
